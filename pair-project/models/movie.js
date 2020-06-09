@@ -39,7 +39,10 @@ module.exports = (sequelize, DataTypes) => {
     country: DataTypes.STRING,
     awards: DataTypes.STRING,
     poster: DataTypes.TEXT
-  }, { sequelize, modelName: 'Movie' });
+  }, {
+    sequelize,
+    modelName: 'Movie'
+  });
   Movie.associate = function (models) {
     //! associations can be defined here
     Movie.hasMany(models.Review)
